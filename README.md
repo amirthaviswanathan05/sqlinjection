@@ -92,8 +92,9 @@ After logging out, Now choose the menu as shown below:
 
 <img width="1902" height="897" alt="image (2)" src="https://github.com/user-attachments/assets/d8eebb39-a1cd-4c7e-b25e-13f10d70fa12" />
 
+<img width="1911" height="904" alt="image (3)" src="https://github.com/user-attachments/assets/a60ec9cb-ab8a-4f66-b4ae-7aa3ab0ec44b" />
 
-![Screenshot 2023-06-10 224530](https://github.com/praveenst13/sqlinjection/assets/118787793/a242176f-df4f-4eb2-8296-0671fd7d7264)
+<img width="1911" height="904" alt="image (3)" src="https://github.com/user-attachments/assets/d0528f5e-8ddc-4a89-88f5-277404bfa1d4" />
 
 From this point, all our attack vectors will be performed in the URL section of the page using the Union-Based technique.There are two different ways to discover how many columns are selected by the original query. The first is to infuse an “ORDER BY” statement indicating a column number. Given the column number specified is higher than the number of columns in the “SELECT” statement, an error will be returned.
 
@@ -122,9 +123,8 @@ When we ordered by 5, it worked and displayed some information. It means there a
 
 
  As it is having 5 columns the query worked fine and it provides the correct result
+<img width="1911" height="904" alt="image (3)" src="https://github.com/user-attachments/assets/2e8a7b99-f111-443c-bd6e-6a94a5613408" />
 
-
-![Screenshot 2023-06-10 224939](https://github.com/praveenst13/sqlinjection/assets/118787793/7a660480-5cb6-4d86-acd1-08f7a4d5e2fa)
 
 
 Instead of using the "order by" option, let’s use the "union select" option and provide all five columns. Ex: (union select 1,2,3,4,5)
@@ -136,9 +136,6 @@ As given in the screenshot below columns 2,3,4 are usable in which we can substi
 
 http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%201,database(),user(),version(),5%23&password=&user-info-php-submit-button=View+Account+Details
 
-
-
-![Screenshot 2023-06-10 225314](https://github.com/praveenst13/sqlinjection/assets/118787793/78ba6fc7-7ab6-4c39-8a7f-c8e4240775b8)
 
 The url when executed, we obtain the necessary information about the database name owasp10, username as root@localhost and version as 5.0.51a-3ubuntu5.
 In MySQL, the table “information_schema.tables” contains all the metadata identified with table items. Below is listed the most useful information on this table.
